@@ -155,9 +155,9 @@
 
 			<div class='row'>
 				{#if selected=='Add'}
-				<LabelValue label='Available' value={`${formatForDisplay($balances[data.position.asset]) || "-"} ${data.position.asset}`} isClickable={true} on:click={() => {margin = $balances[data.position.asset] || 0}} />
+				<LabelValue label='Available' value={`${formatForDisplay($balances[data.position.asset] || 0)} ${data.position.asset}`} isClickable={true} on:click={() => {margin = $balances[data.position.asset] || 0}} />
 				{:else}
-				<LabelValue label='Available' value={`${formatForDisplay(availableRemoveMargin) || "-"} ${data.position.asset}`} isClickable={true} on:click={() => {margin = availableRemoveMargin}} />
+				<LabelValue label='Available' value={`${formatForDisplay(availableRemoveMargin)} ${data.position.asset}`} isClickable={true} on:click={() => {margin = availableRemoveMargin}} />
 				{/if}
 			</div>
 
